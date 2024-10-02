@@ -3,6 +3,7 @@
 "use client"; // Make this a Client Component
 
 import { useState } from 'react';
+import Image from 'next/image'; // Import the Image component
 
 // Define a type for the expected member details
 interface Member {
@@ -46,6 +47,17 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-10">
+      {/* Logo at the top */}
+      {/* <div className="mb-6">
+        <Image
+          src="/app/assets/logo.png" // Adjust the path to the logo
+          alt="AIMLSA Logo"
+          width={350}
+          height={350}
+          className="object-contain"
+        />
+      </div> */}
+      
       <h1 className="text-3xl font-bold mb-6">AIMLSA Member Verification</h1>
       
       <form onSubmit={handleSubmit} className="mb-6">
@@ -58,14 +70,14 @@ export default function Home() {
           value={id}
           onChange={(e) => setId(e.target.value)}
           className="px-4 py-2 border border-gray-400 rounded-lg mb-4 w-full text-black" 
-          placeholder="AIML001"
+          placeholder="Unique ID"
           required
         />
         <button
           type="submit"
           className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
-          Verify
+          निर्णी (Verify)
         </button>
       </form>
 
